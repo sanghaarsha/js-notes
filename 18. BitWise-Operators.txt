@@ -1,0 +1,91 @@
+
+// These are more used theoretically.
+
+// The number 1 in decimal system is represented as :
+
+// 1 = 00000001 
+// 2 = 00000010
+
+// 1 bit = 1 or 0
+// 8 bit = 1 byte
+
+//Bitwise operators are similar to logical operators but they 
+//work on individual bits of a number.
+
+//Single Vertical Line "|" represents BitWise OR
+
+console.log(1 | 2); // BitWise OR
+> 3
+
+// What happens here is This Operator Looks Boths digits at Bit Level 
+
+// 1 = 00000001
+// 2 = 00000010
+
+//If one of the digits is 1 it returns 1 else it returns 0.
+
+// R = 00000011
+
+//Converting the R into Decimal System , we get output = 3.
+
+
+//BitWise AND
+
+console.log(1 & 2);
+> 0
+ 
+// 1 = 00000001
+// 2 = 00000010
+
+//If Both of the Digits at equivalent Position are 1 it returns 1, else
+//it returns 0.
+
+//R = 00000000
+
+//0 in Decimal = 0. Which is the output.
+
+// Lets See, Where they are used in real World
+
+// Lets imagine you want to Implement an Access Control System.
+// Permissons : Read, Write, Execute
+
+
+// Lets take last 3 digits from 8 bits of 0s
+// 00000'000' 
+//'' means these 3 are selected nothing more 
+
+
+// if a user has only Reading Permission lets set first digit of 000 to 1
+// which makes 00000100 (equivalent to 4)
+
+// if a user has  Write permission , second digit is 1
+// which makes 00000010 (equivalent to 2)
+
+// if user has execute permission  third digit is 1
+// which makes 00000001 (equivalent 1)
+
+//so lets code this Access Control System
+
+const readPermission = 4;
+const writePermission = 2;
+const executePermission = 1;
+
+let myPermission = 0;
+
+myPermission = myPermission | readPermission | writePermission;
+console.log(myPermission);
+> 6
+
+let message = (myPermission & readPermission) ? 'yes' : 'no';
+console.log(message);
+> yes 
+
+
+let message = (myPermission) ? 'yes' : 'no';
+console.log(message);
+> no
+
+// So with bitwise or operator we can add permissions ,
+// and with bitwise and operator we can check to see if
+// we have given permission.
+

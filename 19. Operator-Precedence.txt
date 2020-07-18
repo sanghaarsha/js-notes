@@ -1,0 +1,19 @@
+
+let x = 2 + 3 * 4;
+
+console.log(x);
+> 14
+
+//This is because * operator has higher precedence than + , so product of 3
+//and 4 is added to 2.
+
+//Using Parenthesis we can change Operator precedence.
+
+// Lets look at the same example but with Parenthesis used.
+
+let x = (2 + 3) * 4;
+
+console.log(x);
+> 20
+
+// Here result is different because now 2+3 has higher precedence
