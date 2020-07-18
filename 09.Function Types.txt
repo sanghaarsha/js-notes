@@ -1,0 +1,20 @@
+//Performing a task
+
+funcion sayHello(firstName,lastName) {
+	console.log("Hello, " + firstName+' '+ lastName + ' !');
+}
+
+sayHello('Joseph','Joestar');
+
+//Calculating a value
+
+function area(num){
+	return num*num;
+}
+
+console.log(area(2));
+
+What happens here is first JS engine calls area function, passes the value and returns it to another function console.log.
+So, here is 2 function calls. i.e area & console.log
+
+So, functions is a set statements that either performs a task or calculates and returns a value.
