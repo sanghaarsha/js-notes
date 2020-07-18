@@ -1,0 +1,69 @@
+//Result of Logical Operators is not neccessarily true or false,
+// it may also be
+an non-boolean value.
+
+console.log(true || false);
+> true
+
+console.log('Hello' || false);
+> Hello
+
+console.log(1 || false);
+> 1
+
+
+//So what happens here is JavaScript engine looks at each operands. If one of 
+//the operands is not true/false, it tries to interpret it as Truthy/Falsy.
+
+// Falsy(It's not the boolean false but falsy), some of the falsy values are:
+
+	// undefined
+	// null
+	// 0
+	// false
+	// ''
+	// NaN
+
+//Anything that is not falsy is Truthy
+
+//Lets look at the example :
+
+currentColor =''; // '' is a falsy
+userColor='Red';
+
+console.log(userColor || currentColor);
+>Red
+
+//What if a Condition is like this :
+
+console.log(false || 1 || 2);
+> 1
+
+//No matter how many conditions are there once JS engine finds a 
+//True or a Truthy value it returns it. This is called Short-Circuiting.
+
+
+//So when it's used in Real World?
+//It's used to set a Default value in Program.
+//We have a Default value which is Selected if User given Value is null.
+
+//Let's look at modified example from above:
+
+//When userColor is null
+
+defaultColor ='Red'; // '' is a falsy
+userColor='';
+
+console.log(userColor || defaultColor);
+>Red
+
+//When User color is Yellow
+
+defaultColor ='Red'; //Truthy
+userColor='Yellow'; // Truthy
+
+console.log(userColor || defaultColor);
+> Yellow
+
+//So here if user selects a color that color is selected else defaultColor is selected. As First Truthy is returned by Default.
+
