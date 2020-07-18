@@ -1,0 +1,19 @@
+//Strict Equality Operator (Must have Same Type & Value)
+
+console.log(1 === 1)
+> true
+
+console.log('1' === 1)
+> false
+
+
+//Loose Equality Operator (Type does not matter but Must have Same Value)
+
+console.log(1 == 1)
+> true
+
+console.log('1' == 1)
+> true
+
+console.log(true == 1)
+> true
