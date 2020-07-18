@@ -1,0 +1,28 @@
+let x = 10;
+let y = 3;
+
+//Arithmetic Operators
+
+let sum = x+y;  //Addition
+let sub = x-y;  //Subtraction
+let mul = x*y;  //Multiplication
+let div = x/y;  //Divison
+let mod = x%y;  //Modulo (returns remainder)
+let exp = x**y; //Exponentiation (raises to the power i.e x^y)
+ 
+console.log(exp);
+
+//We also have Increament and Decreament operators
+
+//Increment (++)
+//Two ways of using it (++x,x++)
+
+console.log(++x) //This increases the value of x by and logs to console
+console.log(x++) //This logs the value of x in console and increases it by 1
+console.log(x)   // Now we can see the increased value from x++
+
+//Decrement
+//Two ways of using it (--x,x--)
+
+//Works similar to Increament except decreases value by 1.
+
