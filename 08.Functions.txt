@@ -1,0 +1,52 @@
+//Functions
+
+a function is declared using 'function' keyword. 
+Syntax :
+
+function sayHello() {
+	console.log("Hello, World !");
+}
+
+As you can see JS has C like syntax.
+
+The part of function inside parenthesis is called body, where all our code goes.
+
+//Calling the function
+
+sayHello(); // This has semicolon because it is a statement. Notice Function does not have semicolon except in its body.
+
+//Parameters & Arguments
+
+ function sayHello(name) {
+	console.log("Hello, " + name + ' !');
+}
+
+sayHello('John');
+
+Here, 'John' is an argument to the sayHello function and 'name' is the parameter.
+
+So parameter is a varible given to the function during declaration.
+Argument is the value passed in it while calling the function.
+
+Also, Function can be called multiples of times and may have multiples of parameters.
+
+
+//Calling Multiple of Times
+
+function sayHello(name) {
+	console.log("Hello, " + name + ' !');
+}
+
+sayHello('Joseph');
+sayHello('Joestar');
+
+//Giving Multiple Parameters
+
+function sayHello(firstName,lastName) {
+	console.log("Hello, " + firstName+' '+ lastName + ' !');
+}
+
+sayHello('Joseph','Joestar');
+
+If you don't pass value in an argument it will be shown undefined which is default value.
+
