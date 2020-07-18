@@ -51,8 +51,8 @@ console.log(false || 1 || 2);
 
 //When userColor is null
 
-defaultColor ='Red'; // '' is a falsy
-userColor='';
+defaultColor ='Red'; // Truthy
+userColor=''; // '' is a falsy
 
 console.log(userColor || defaultColor);
 >Red
@@ -62,7 +62,7 @@ console.log(userColor || defaultColor);
 defaultColor ='Red'; //Truthy
 userColor='Yellow'; // Truthy
 
-console.log(userColor || defaultColor);
+console.log(userColor || defaultColor); //First Truthy is Selected
 > Yellow
 
 //So here if user selects a color that color is selected else defaultColor is selected. As First Truthy is returned by Default.
