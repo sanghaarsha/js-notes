@@ -1,0 +1,33 @@
+//Arrays
+
+let selectedColors= [] //initialized an empty array
+
+selectedColors= ['red','yellow']
+
+consle.log(selectedColors);
+
+Array Starts from 0 in JS.
+
+//To read first array value
+
+console.log(selectedColors[0])
+
+
+
+//To add other values
+//Objects in array and size of arrays are dynamic which means you can add values of different data types as you need.
+
+selectedColors[2]='green' //adding value as we need
+selectedColors[3]= 9 //adding integer value 
+
+Arrays are also an object.
+
+typeof selectedColors
+> "object"
+
+Predefined objects like Arrays, Strings have predefined properties, one of them is length.
+
+console.log(selectedColors.length)
+> 4
+
+So, Array is an datastructure that is used to represent list of items.

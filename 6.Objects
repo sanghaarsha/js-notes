@@ -1,0 +1,29 @@
+let name = 'Mosh';
+let age = 30;
+
+As these are properties of a person, Lets create person object:
+
+let person = { 		//{} These curly braces are Object Literal
+
+	name:'Mosh',
+	age:30
+ };
+ 
+ Between these curly braces are Key Value Pairs 
+ Keys are called Properties
+ 
+ console.log(person);
+ 
+ change the name of person (Two ways):
+ 
+ 1.Dot Notation
+ 	
+ 	person.name='John';
+ 
+ 	console.log(person.name) //To log the value in console
+ 
+ 2.Bracket Notation
+ 
+person['name']='Joseph Joestar'
+
+console.log(person['name']) //logs value in console

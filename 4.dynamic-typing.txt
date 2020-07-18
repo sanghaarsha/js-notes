@@ -1,0 +1,24 @@
+JavaScript is a dynamic language.
+That means type of variable can be changed at runtime.
+
+
+> let age = 30;
+> typeof age
+<-"number"
+
+> let age = 30.59;
+> typeof age
+<- "number"
+
+it's still a number. JS doesn't have types of number like float & int.
+
+> let name="abc";
+> typeof name
+<-"string"
+
+> let name=5;
+> typeof name
+<-"number"
+
+Here, we see type of name is changed to number.
+This is dynamic typing.

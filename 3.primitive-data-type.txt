@@ -1,0 +1,7 @@
+Primitive Data Types in JS:
+
+let name = 'Mosh'; //String Literal
+let age = 30; // Number Literal
+let isApproved= true; //Boolean Literal
+let firstName= undefined; //Undefined
+let selectedColor= null; //Null

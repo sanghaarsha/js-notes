@@ -1,0 +1,7 @@
+value of constant will not change anywhere.
+
+to declare : use 'const'
+
+syntax:
+
+const intrestRate = 0.3;
