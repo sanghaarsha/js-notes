@@ -1,0 +1,5 @@
+//As name implies it is used to compare values.
+
+//Result of an expression that uses this operator is true or false. Which are of boolean types.
+
+ 

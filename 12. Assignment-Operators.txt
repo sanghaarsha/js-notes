@@ -1,0 +1,20 @@
+let x = 10;
+
+// x++ = x = x+1
+
+//But what if you want to increment by 3?
+
+x = x+3;  //But there is a short hand
+x += 3   //Both are same
+
+//For Multipication
+
+x = x*3;
+
+//OR
+
+x *= 3;
+
+//Both are same 
+
+//Every arithimetic operators can use this combination with the assignment operators.
