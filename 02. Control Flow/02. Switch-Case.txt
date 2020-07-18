@@ -1,0 +1,29 @@
+// Switch Case is used to campare value of the variable 
+// with bunch of other values
+
+let role;
+role='guest';
+
+switch(role){
+	case 'guest':
+		console.log('Guest User');
+		break;
+	case 'moderator':
+		console.log('Moderator User');
+		break;
+	default:
+		console.log('Unknown User');
+}
+
+
+//Implememting same program using if-else
+
+if(user === 'guest')
+console.log('Guest User');
+else if (user === 'moderator')
+console.log('Moderator User');
+else
+console.log('Unknown User');
+
+
+//Implementing in If-Else is a lot Cleaner & Shorter.

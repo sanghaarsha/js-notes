@@ -1,0 +1,35 @@
+//Program to display Odd numbers in between 1 to 10
+
+let i = 0;
+
+do{
+	if (i%2 !== 0)
+	console.log(i);
+	i++;
+}
+
+while(i<=10);
+
+//In this loop condition is checked after the first iteration
+
+//So lets check if thats the case.
+
+//Lets use decrement operator to solve the same problem
+//But a little bit modified
+//As i is an global variable and already used 
+//lets use another variable x
+
+let x = 11;
+
+do{
+        if (x%2 !== 0)
+        console.log(x);
+        --x;
+}
+
+while(x<=10 && x>0);
+
+//If we run the program we will get 11 as the output
+//But condition says number must be less than 10.
+//Which is because of the first iteration done before
+//checking the condition.

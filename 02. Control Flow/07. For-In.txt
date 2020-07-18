@@ -1,0 +1,25 @@
+//This is used to iterate over other objects
+
+const person={
+	name: 'Superman',
+	age: 150,
+	place:'krypton',
+	fear:'kryptonite'
+};
+
+for(let key in person){
+	console.log(key, person[key]);
+}
+
+//person.key can not be used as it is undefined
+
+//Lets iterate over Arrays
+
+const colors = ['red','yellow','white'];
+
+for (let index in colors){
+	console.log(colors[index]);
+}
+
+//Ideal way to iterate over array is For-Of loop
+//Introduced in ES6

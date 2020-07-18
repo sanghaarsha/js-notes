@@ -1,0 +1,8 @@
+//program to diaplay odd numbers in between 1 to 10 using while loop
+
+let i=1;
+while(i<=10){
+	if(i % 2 !== 0) //odd numbers divided by 2 do not return 0 as remainder
+	console.log(i);
+	i++; //increment
+}

@@ -1,0 +1,27 @@
+// For is used to loop a block of code for number of times.
+
+syntax :
+
+for(initialization; condition; increment/decrement){
+	statement..1;
+	statement..2;
+	statement..n;
+}
+
+
+code :
+
+for(let i = 0; i<5 ; i++){ 
+        console.log('Hello, World !');
+        console.log('Hello, World !');
+}
+
+//This code will log 'Hello, World !' in console for 10 times.
+
+
+//Lets print odd numbers between 1 to 100
+
+for (let i=1; i<=100; i++){
+	if(i%2 !== 0)
+	console.log(i);
+}

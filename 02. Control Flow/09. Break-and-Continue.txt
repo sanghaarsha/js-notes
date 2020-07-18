@@ -1,0 +1,40 @@
+// These are used to change the flow of loop
+// With further more conditions
+
+// lets see Break in action
+
+let i = 0;
+
+while(i<=10){
+	if (i===7)
+	break;
+	
+	console.log(i);
+	i++;
+}
+
+// Normally without break this program would display
+// The numbers in between 1 to 10.
+// But with the condition imposed before break
+// Abobe program will only display numbers from 1 to 6.
+
+//Lets see continue in action
+
+let x = 0;
+
+while(x<=10){
+
+	if(x%2 === 0){
+	x++;
+	continue;
+	}
+	
+	console.log(x);
+	x++;
+}
+
+// Above program will display odd numbers in between 1 to 10
+// Because when a value of x is even it enters the if condition
+// which will increase its valye by 1 which will be odd number
+// And continue will jump the code to the next iteration
+// Without iterating over remaining statements.
