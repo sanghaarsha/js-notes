@@ -1,0 +1,58 @@
+//Object Oriented Programming (OOP)
+
+//If you have properties, highly related with each other, then 
+//they can be encapsulated in an object
+
+//The value inside Object Literal can be of any types. May be 
+// Number, string , another object, array , function.
+
+//Quite often we have some functions needed to operate these variables
+//These may be put inside the object iteslf and called as method
+
+//Function inside an Object is called Method.
+
+//syntax of object
+
+let objectName = { //{} are known as object literal
+	key1 : value1,
+	key2 : 'value2',
+	key3 : function (){
+	
+	},
+	key4 : {
+		keyn1 : valuen1,
+		keyn2 : valuen2
+	}
+};
+
+// Lets look at a example 
+
+// Lets take a look at a Circle,
+// It has radius, and a position among many properties
+
+
+let circle = {
+	radius : 5,
+	
+	position : {
+		x :1,
+		y:1
+	},
+	
+	isVisible: true,
+	
+	draw : function() {
+	
+	},
+	
+	move : function() {
+	
+	}
+};
+
+circle.draw (); //this will call draw method
+circle.move (); //this will call move method
+
+
+//This was a way to create Objects using Object Literal Syntax.
+

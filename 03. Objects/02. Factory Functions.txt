@@ -1,0 +1,40 @@
+// Factory Function
+
+
+// Previous method of creating objects will let you create
+// Object for a single circle, if you have multiples of circle
+// You would need multiples of objects, but thats not efficient
+// Thats where Factory functions comes in.
+
+function createCircle(radius,location){
+	return {
+	
+	radius,
+	
+	 //if key and value are same you can remove value and only keep key 		//radius: radius, ==> radius,
+	
+	location,
+	
+	//location : location, ==> location,
+	
+	draw(){
+		console.log('draw');
+	}
+	
+	// key : function() {} ==> key() {}
+	// So above methos is same as,
+	// draw : function(){
+	//	console.log('draw');}
+	
+	}
+	
+	//Instead of returning from here 
+	//we have directly kept return above
+};
+
+const circle1 = createCircle(1,1);
+console.log(circle1);
+circle1.draw(); // calling the draw method
+
+const circle2 = createCircle(2,3);
+console.log(circle2);

@@ -1,0 +1,44 @@
+// Constructor Function
+// Naming Convention for Factory Function : Camel Notation i.e oneTwoThreeFour
+// Naming Convention for Cunstructor Fucntion : Pascal Notation i.e OneTwoThreeFour
+
+//Factory Function
+
+// function createCircle (radius){
+// 	return {
+// 		radius,
+// 		draw(){
+// 			console.log('draw');
+// 		}
+// 	};
+// }
+
+//Constructor Function
+
+//In JavaScript there is a keyword called 'this'
+//'this' is a refrence to the object that is executing this piece of code
+//similar to 'self' in python
+
+function Circle(radius){
+	this.radius = radius;
+	this.draw = function() {
+		console.log('This Method Drew a Circle.');
+	}
+}
+
+const newCircle = new Circle(5);
+
+//How it works ?
+
+//So what happens here is 'new' keyword creates an empty object under the hood
+//which looks like this x = {};
+//Next, it will set 'this' to point at the new empty object created and gives access
+//To the 'radius' property and 'draw' method
+//Finally it returns the value to the 'newCircle' constant
+// without use of return keyword manually 
+
+
+//Lets display the output and call the methods
+
+console.log(newCircle);
+newCircle.draw();
