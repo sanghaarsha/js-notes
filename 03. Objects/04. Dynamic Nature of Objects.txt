@@ -1,0 +1,51 @@
+// In JavaScript Objects are dynamic.
+// Once you create an object you can always add or remove
+// methods and properties to them.
+
+//lets take an object 'circle'
+
+const circle = {
+	radius : 1
+};
+
+console.log(circle);
+//It has only property 'radius'
+//lets add a property
+
+circle.color = 'yellow';
+console.log(circle);
+
+//Now we can see it has a new property 'color'
+
+circle.draw = function() {
+	console.log('This method drew a circle.')
+}
+
+console.log(circle);
+//Now 'circle' object has a new method 'draw'
+
+//lets call the method 
+circle.draw();
+
+//Now we have new output in console , called from 'draw' method.
+
+//Now lets delete some 
+
+delete circle.color;
+delete circle.draw;
+console.log(circle);
+
+//Now the circle object has a single property 
+
+//Something you might have noticed is 'circle' object is a constant
+//So how are we able to change this around?
+//This is possible because although 'circle' object is constant
+//The objects and properties inside are not , they can be assigned or deleted
+//But you can not assign a new value to 'circle' object itself .
+//Lets see :
+
+// circle = {};
+
+//As i have assigned a new value , there must be an error message in the console
+//With an error 'TypeError: Assignment to constant variable.' like this.
+//Uncomment and run to see it live.
