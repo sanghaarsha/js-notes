@@ -1,0 +1,3 @@
+const aNew = new Function('radius',`this.radius=radius;`);
+console.log(aNew.constructor);
+

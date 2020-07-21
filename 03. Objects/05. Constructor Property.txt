@@ -1,0 +1,81 @@
+// Every object in javascript has a property called constructor
+// And that refrences to the function that was used to create that object
+
+// Lets create two objects
+
+//first with Factory Function
+const circle = createCircle(2);
+
+function createCircle(radius){
+	return{
+		radius,
+		postion : {
+			x :1,
+			y :2
+		},
+		draw : function(){
+		console.log('This Method Drew a Circle.');
+		}
+	};
+}
+
+//second with Constructor Function
+
+const AnotherCircle = new Circle(5);
+
+function Circle(radius){
+	this.radius = radius;
+	this.postion = {
+			x :1,
+			y :2
+		};
+	this.draw = function (){
+		console.log('This Method Drew another Circle.');
+	}
+}
+
+
+//Now lets look the constructor of each objects above :
+
+console.log(circle.constructor);
+console.log(AnotherCircle.constructor);
+
+//If we see constructor type of factory functionit's 'Object' 
+//But that of constructor function is It's object name 'Circle'
+//Why is that ??
+
+//From console we can see the type of 'Object' is function
+//And as it's first letter is capital it's of Constructor function type.
+//So, here javascript engine created a built-in Constructor function
+
+//So what happens is, when you create an object using Object Literal Syntax
+//JavaScript engine internally Uses this Constructor function
+
+//Lets look at another example
+
+let x = {};
+console.log(x.constructor);
+
+//Here we have declared an object using Object Literal
+//So, First thing JavaScript engine does is translate it to :
+// let x = new Object {};
+//And in console you can see that it's a Constructor function 
+
+// In JavaScript there are many Constructors like :
+// new Boolean(); for => true or false
+// new Number(); for => integers/floats
+// new String(); => for strings
+// But we often use "" or '' to declare strings because of simplicity and clearity of code.
+// But internally JSengine is linking the data type to constructor property
+// That has a function used to create specific data type
+
+//This is what we write code in
+let string1 = 'Hello';
+console.log(string1.constructor);
+
+//This is what happens in JS-engine
+let string2 = new String('Hello');
+console.log(string2.constructor);
+
+//Every Object has an Constructor Property
+//And that refrences to the function used to create that object.
