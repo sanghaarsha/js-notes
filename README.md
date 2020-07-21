@@ -1,1 +1,1 @@
-## Notes on JavaScript for Beginners.
+## Beginner's Notes on JavaScript.
