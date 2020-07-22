@@ -1,3 +1,48 @@
-const aNew = new Function('radius',`this.radius=radius;`);
-console.log(aNew.constructor);
+// Functions are also Objects in Javascript
+// Lets create a function
+
+
+function circle(radius){
+	this.radius=radius;
+	this.draw()=function(){
+		console.log('This Function Drew a Circle');
+	}
+}
+
+const another = new circle(1);
+
+// If functions are objects 
+// then lets apply some methods to it.
+
+circle.call({},1) ;	// this is same as 'const another = new cicle(1);'
+
+// First argument is 'thisArg' and here we have passed an empty object
+// What happens then is 'this' in code will refrence the empty object passed.
+// Second argument and further are the arguments to be passed in called function.
+// eg. functionName.call({},arg-1,arg-2,arg-3...arg-n);
+
+//another way is
+circle.apply({},[arg-1,arg-2,arg-3...arg-n])
+
+//Only differnce here is instead of 
+//passing arguments explicitly we pass arrays.
+
+
+// JavaScript engine will use a constructor function 'new Function()' 
+// Internally it will look like this
+
+const circle1 = new Function('radius',`
+	this.radius=radius;
+	this.draw()=function(){
+		console.log('This Function Drew a Circle');
+	}
+`)
+
+const Circle = new circle1(2);
+
+// In above code constructor function 'new Function()' 
+// is used to create an object Circle which is a function
+
+
+//Don't forget : In JavaScript Functions are Objects.
 
