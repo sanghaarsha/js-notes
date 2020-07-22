@@ -1,0 +1,32 @@
+// Math is one of the Built-in Object of JavaScript
+// Use of it and JS basically is extensively documented in MDN.
+
+//some of the use cases are
+
+let x = -9;
+
+Math.abs(x); // returns positive value
+> 9
+
+Math.floor(1.6); //returns a number that's less than or equal to the given number
+> 1
+
+Math.random(); //returns a random number
+> 0.934 
+
+//Random number between two values => Math.random() * (maxNumber-minNumber) + minNumber;
+
+console.log (Math.floor((Math.random() * (7-1) + 1)));
+// Returns random numbers for Dice Probablity (1-6)
+
+Math.round(1.8);
+> 2
+// Returns the rounded up number
+
+Math.max(1,2,4,5,2,3,1,6);
+> 6
+//Returns maximum number among given arguments.
+
+Math.max(1,2,4,5,2,3,1,6);
+> 1
+//Returns minimum number among given arguments.
