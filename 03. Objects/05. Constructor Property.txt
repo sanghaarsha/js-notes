@@ -65,7 +65,9 @@ console.log(x.constructor);
 // new Boolean(); for => true or false
 // new Number(); for => integers/floats
 // new String(); => for strings
-// But we often use "" or '' to declare strings because of simplicity and clearity of code.
+// But we often use "" , '' or `` (backtick for multiple lines)
+// to declare strings because of simplicity and clearity of code.
+
 // But internally JSengine is linking the data type to constructor property
 // That has a function used to create specific data type
 
