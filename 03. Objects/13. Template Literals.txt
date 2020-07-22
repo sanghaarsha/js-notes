@@ -1,1 +1,56 @@
+// Formatting string using escape characters is quite painstaking
+// The code will be unclean and unreadable .
+// So, from ES6 JavaScipt has template literals 
+// Which makes formatting of string very easy and clean.
+// Backtick are the Template literals
 
+//Now lets format using Template literals
+const newText = 
+`Hello,world!
+		 
+This is me ...
+Thanks for taking your time to read this guide.
+
+Warm regards,
+...
+
+`
+//Now lets log newText into the console
+
+console.log(newText)
+>Hello,world!
+		 
+ This is me ...
+ Thanks for taking your time to read this guide.
+
+ Warm regards,
+ ...
+ 
+// It was easy as that to format
+
+// You can also use var/const inside template literals for formatting
+
+let myName = 'John';
+let yourName = 'Doe';
+
+const newText = 
+`Hello,${yourName}!
+		 
+This is me ${myName}.
+Thanks for taking your time to read this guide.
+
+Warm regards,
+${myName}
+`;
+
+// Lets log this in the console
+
+console.log(newText);
+>
+Hello,Doe!
+
+This is me John.
+Thanks for taking your time to read this guide.
+
+Warm  regards,
+John

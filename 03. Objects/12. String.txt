@@ -1,1 +1,96 @@
+// String is another Built-in method of javascript
 
+
+const message = 'T';
+
+// if you log message.length in console you get 2 
+// but string is of primitive data type, it should not
+// have properties or method. But why does it have them?
+
+// It's because in javascript we have two types of string.
+// They are String Primitive & String Object
+
+
+//String Primitive
+const sayHello = 'This is my first message';
+
+typeof sayHello
+> string
+
+//String Object
+const another = new String('Hi'); //string created by using String() constructor function.
+
+typeof another
+> object
+
+// What happens in background is even it's a string primitive
+// If we use dot notation with it JavaScript wraps this with the String Object.
+// And thus we can used methods and properties. 
+
+// Lets see few of the methods you can use with strings.
+// Only use the code above the line that contains '>'
+ 
+sayHello.length
+> 24
+//shows length of the string
+
+sayHello[0]
+> T
+// Shows the letter from given index
+
+sayHello.includes('my')
+> true
+// Checks if given input is present in the string.
+
+sayHello.startsWith('This')
+> true
+// Checks if the given input is what string starts with
+// This is case sensitive
+
+sayHello.endsWith('hey')
+> fasle
+// Checks if the given input is what string ends with
+// This is also case sensitive
+
+sayHello.indexOf('my')
+> 8
+// Returns index of given input present in the string
+
+sayHello.replace('first','second')
+> This is my second message
+
+// Replaces the part of string matching with 
+// the first argument with second argument
+// NOTE : It does not change the string stored in var/const
+// it only modifies and shows the string but original string in var/const stays same
+
+sayHello
+> This is my first message
+
+// see the original is unaffected, same for the below codes too.
+
+sayHello.toUpperCase()
+> THIS IS MY FIRST MESSAGE
+
+sayHello.toLowerCase()
+> this is my first message
+
+sayHello.trim() // removes whitespaces from both left and right side of the string
+sayHello.trimLeft() // removes whitespaces from left side of the string
+sayHello.trimRight() // removes whitespaces from right side of the string
+
+sayHello.split(' ')
+> ['This','is','my','first','message']
+
+// This will split the string from specified location and return an array
+// In this case location is a space
+
+
+// Escape Notation
+
+// \' => will give you a single quote
+// \" => will give you a double quote
+// \\ => will give you a backslash
+// \n => will give you a new line
+// \v => will give you a vertical tab
+// \t => will give you a tab

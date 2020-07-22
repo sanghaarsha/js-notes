@@ -1,1 +1,37 @@
+// Date is another built in object in JavaScript
+// This is not last though there are many more built in objects.
 
+const dateNow = new Date();
+
+// Date constructor here returns current date
+
+const date1 = new Date('May 11 2018 09:00');
+
+// There are much more of other supported formats
+
+const date2 = new Date(2018,4,11,9) //Date(y,m,d,hour,min) => 0:January, 11:December
+
+// This is how Date Objects are created
+// Date objects have built in 'get' and 'set' methods 
+
+// get methods
+dateNow.getDate(), // returns day of the month
+dateNow.getFullYear(),// returns full year
+dateNow.getHours(), // returns hours
+dateNow.getMonth(), // returns month
+dateNow.getSeconds(), // returns seconds
+dateNow.getTime() // returns time
+
+// set methods
+dateNow.setFullYear(2017); // Changes year to 2017
+dateNow.setHours()..,etc.
+
+// Uses
+
+dateNow.toDateString(); // Returns current full date in String Format
+> 'Wed Jul 22 2020'
+
+dateNow.toISOString(); // Returns current full date string in ISO Format
+> '2020-07-22T15:11:55.315Z'
+
+// ISO format is commonly used in Web app/Mobile apps Backends
