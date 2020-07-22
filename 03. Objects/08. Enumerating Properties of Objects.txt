@@ -1,0 +1,39 @@
+// We can enumerate properties of objects explicitly using for..in 
+
+// But for..of can also be used with another method Object.keys(objectName)
+// Another method is required with for..of because it can only be used with iterables,
+// i.e Arrays and Maps, and  Object.keys() returns array of all the keys.
+
+// We can find a certain key in the properties of object by if ('keyName' in objectName)
+// eg. if ('color' in myObject) console.log('color key found');
+
+// To enumerate the entries for..of can be used with another object Object.entries(objectName)
+
+//Lets see them in examples
+
+const circle = {
+	radius : 1,
+	draw(){
+		console.log('This is draw method.');
+	}
+};
+
+//for..in (simplest way)
+
+for (let key in circle)
+  console.log(key,circle[key]);
+  
+//for..of with Object.keys()
+
+for (let key of Object.keys(circle))
+  console.log(key);
+  
+//for..of with Object.entries() => returns each key : value pair as an array.
+
+for (let entry of Object.entries(circle))
+  console.log(entry);
+  
+//to check if a given object has a given property or a method
+
+if ('radius' in circle) 
+  console.log('radius found');
