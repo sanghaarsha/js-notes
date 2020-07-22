@@ -1,0 +1,44 @@
+// Primitive Data Types : Number, String, Boolean, Symbol, undefined, null
+// Reference Data Types  : Object, Function, Arrays
+
+// In Nutshell : As functions and arrays are also objects,
+// there really are two data types Primitives vs Objects(Reference)
+
+// Lets see how they act differently.
+
+// In case of Primitive Data Types 
+
+let x = 10;
+let y = x;
+
+let x = 20;
+
+console.log(x); //20
+console.log(y); //10
+
+// Here we can see the values are copied in each variables
+// So, they are independent of each other.
+
+// Independent why??
+// To know lets look at the Reference Data Types.
+
+let x = { value : 10 };
+let y = x;
+
+x.value = 20;
+
+console.log(x); // { value : 20 };
+console.log(y); // { value : 20 };
+
+// Here we see the values are same unlike above.
+// Why is that? It's all play of memory address.
+// As the name suggest they are reference to
+// the address of memory where the value is stored.
+// When we are doing y = x for a reference type 
+// all we are doing is giving it the memory adderss where
+// the value of x is stored. So when the value of x is changed 
+// anywhere in the program value of y is changed to the same.
+
+//In simple words , both x and y are pointed to the same Object in the memory.
+
+// Thats why they are dependent while Primitive Data Types are independent.
