@@ -1,0 +1,64 @@
+// By enumerating values in a object we can copy it properties and methods
+// Which lets us to clone that object to a new object.
+// Lets see an example of it.
+
+// Lets create an Object first.
+
+
+const color1 = {
+	first  : 'red',
+	second : 'yellow',
+	third  : 'blue',
+	lovecolor(){
+		console.log('I Love Colors.');
+	}
+};
+
+
+// Lets create another object.
+
+const color2 = {};
+
+// Lets copy the properties and methods of color1 to color2
+
+for (let keys in color1){
+
+	color2[keys]= color1[keys];
+};
+
+// Lets log it to the console to see if the values are copied
+
+console.log(color2);
+
+// Lets call the method from color2 which was copied from color1
+
+color2.lovecolor();
+
+// We were success full but this is an outdated method for cloning
+// We have an better way to do the same thing using Object.assign() method
+// Lets see how it's done.
+
+const color2 = Object.assign({},color1);
+// syntax : Object.assign(emptyObject or existentObject,one or more sourceObject)
+// first argument could also be an existing object remember that
+// and this method can also copy from multiple objects to a single objects
+// this single line of code is equivalent to above multiple of lines.
+
+
+// This is not all, there is another elegent way to do this.
+
+//By using spread operator => ...
+
+const color2 = {...color1};
+
+//those 3 dots are called spread operator
+//basically it copies all the properties and method and paste in the new object
+//remeber to use spread operator you should enclose it in curly braces with
+//the object that is to be copied.
+
+
+//Lets see use cases again :
+//Object.assign : Copy from a single or multiple objects and 
+//		   assign to a empty or existing objects
+
+//spread operator(...) : Shortest way to copy from a single object
