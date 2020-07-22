@@ -1,0 +1,7 @@
+// Unlike others language like C, C++
+// where you should allocate a memory location
+// before creating the objects and deallocate 
+// after using them. JavaScript has what it's
+// called a Garbage Collection, Which does this
+// automatically and you need not to worry about 
+// memory allocation yourself.
