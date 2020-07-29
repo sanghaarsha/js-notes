@@ -1,0 +1,32 @@
+const numbers = [2, 4];
+
+// using const we can add new elements or remove existing ones
+// but we cannot assign new values
+// i.e numbers = []; is invalid
+
+console.log(numbers);
+
+// however you can add or remove values from the array
+
+numbers[0] = 3; // replacing first value with 3
+console.log(numbers);
+
+// as arrays are objects we can use dot notation with them
+
+// adding elements at end of the array
+numbers.push(5, 6);
+console.log(numbers);
+
+// adding elements at beginning of the array
+numbers.unshift(1, 2);
+console.log(numbers);
+
+// adding elements at middle of the array
+numbers.splice(3, 0, 'a', 'b');
+console.log(numbers);
+
+// arrayName.splice(start: number, deleteCount: number, dataToInsert1,dataToInsert2,...,dataToInsertN);
+// Removes elements from an array and, if necessary, inserts new elements in their place,
+// returning the deleted elements.
+// start — The zero - based location in the array from which to start removing elements.
+// deleteCount — The number of elements to remove.
