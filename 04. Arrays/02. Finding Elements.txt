@@ -1,0 +1,28 @@
+let numberToFind = 1;
+const numbers = [1, 2, 3, 4];
+
+// To find if given elements exists in the array
+
+console.log(numbers.indexOf(numberToFind) !== -1);
+// numbers.indexOf() returns -1 if given number does not exists
+// numbers.indexOf() returns number's index if given number exists
+
+//Above method is long and ugly there is a new method for this
+
+console.log(numbers.includes(5));
+// returns true if element exists else returns false
+
+let secondNumberToFind = 1;
+const moreNumbers = [1, 2, 3, 1, 4];
+
+console.log(moreNumbers.lastIndexOf(1));
+// if an array has a duplicate value this method returns last index
+
+// indexOf also takes a second argument from which it will start to check
+
+console.log(moreNumbers.indexOf(2, 2));
+// here, indexOf starts to check from 3rd position in array
+// as 2 is in second position it overlooks and returns -1
+
+console.log(moreNumbers.indexOf(1, 2));
+// it returns the index of second 1
