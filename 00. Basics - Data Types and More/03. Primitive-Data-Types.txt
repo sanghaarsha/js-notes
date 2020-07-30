@@ -6,7 +6,7 @@ let isApproved= true; 		//Boolean Literal
 let firstName= undefined; 	//Undefined
 let selectedColor= null; 	//Null
 
-//'Symbol' is a new Reference Data Type included in ES6.
+//'Symbol' is a new Primitive Data Type included in ES6.
 
 let sym1 = Symbol();	   	//Symbol
 let sym2 = Symbol('foo'); 	//Symbol
