@@ -1,0 +1,29 @@
+// This means joining the elements in arrays.
+
+const firstArray = [1, 2, 3, 4];
+
+// join method returns a string
+
+console.log(firstArray.join(""));
+// joins all elements without any separators
+
+console.log(firstArray.join());
+// joins all elements with comma separator
+
+// Now lets take a look at
+// converting a string into array using split method.
+
+
+let newString = "This is a test string";
+let splittedString = newString.split(" ");
+// splits a string by whitespace and returns in an array
+console.log(splittedString);
+
+// Now lets join them with a hyphen
+let hyphenJoined = splittedString.join('-');
+console.log(hyphenJoined);
+// This concept is used to create URL as they cannot have spaces
+
+let everyLetters = newString.split('');
+// splits every letter of a string and returns in an array
+console.log(everyLetters);
