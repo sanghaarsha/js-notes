@@ -1,0 +1,28 @@
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+
+// One way to combine arrays is concat
+// const combined = first.concat(second);
+// console.log(combined);
+
+// But there is much cleaner method for it.
+// That is spread operator (...)
+
+const combined = [...first, ...second];
+
+console.log(combined);
+
+//Copying array using spread operator
+const copy = [...combined];
+console.log(copy);
+
+// when we spread an array all its elements are returned individually
+// so what we are doing here is declaring a new array and in that array
+// we are adding individual elements of both arrays
+
+// Moreover adding elements in new combined array is easy using spread operator
+// Doing same in concat is painstaking
+
+const newCombined = ["a", "b", ...first, "c", "d", ...second, "e"];
+
+console.log(newCombined);
