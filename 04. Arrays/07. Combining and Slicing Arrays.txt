@@ -1,0 +1,48 @@
+const first = [1, 2, 3, 4];
+const second = [5, 6, 7, 8];
+
+// concatnation of two arrays
+const combined = first.concat(second);
+console.log(combined);
+
+// slicing of a array
+
+const slicedArray = combined.slice(3, 5);
+// silce takes two arguments
+// first : starting index
+// last : index of last number to show +1
+// slice(3,5) will display elements of index 3 & 4.
+console.log(slicedArray);
+
+// if end index is not given it will show 
+// all the element from given starting index
+console.log(combined.slice(4));
+// > [5, 6, 7, 8]
+
+// if both starting and ending index are not passed 
+// it will give a copy of the original array
+
+const copyOfArray = combined.slice();
+console.log(copyOfArray);
+// shows the copy of combined array
+
+// Another thing to note here is
+// If the elements of array are of reference types
+// There values are not copied but there address are copied 
+// and if you change the copied value values in orignal arrays are also changed
+
+const orignalArray = [{key : 1}];
+const secondOrignalArray = [2,3,4,5];
+
+const combinedOrignalArray = orignalArray.concat(secondOrignalArray)
+console.log(combinedOrignalArray);
+// > [ { key: 1 }, 2, 3, 4, 5 ]
+
+//lets change the value of key in combinedOrignalArray
+
+combinedOrignalArray[0].key = 5;
+console.log(combinedOrignalArray);
+// key value is changed to 5
+console.log(orignalArray);
+// key value is changed to 5
+// so both original and copied values are changed.
