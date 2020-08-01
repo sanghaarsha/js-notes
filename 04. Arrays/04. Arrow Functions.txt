@@ -13,3 +13,11 @@ let check = courses.find(function (check) {
 });
 
 console.log(check);
+
+// Lets use arrow function and remove function keyword
+// curly braces and return keyword NOT needed
+
+let checkAgain = courses.find((checkAgain) => checkAgain.id === 1);
+console.log(checkAgain);
+
+// same work but shorter code

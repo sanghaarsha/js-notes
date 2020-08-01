@@ -3,10 +3,12 @@ Notes for Arrow Function:
 2. let/const variableName = (argument) => {function body}
 3. short hand: curly braces and return keyword NOT needed, return result directly after =>
 4. brackets NOT needed in SINGLE parameter function's argument
-5. do NOT bind "this" (avoid for methods) or "arguments". 
-6. It can NOT be used as constructors or generators (I don't know what those mean yet...)
+5. empty brackets needed for no parameter
+6. do NOT bind "this" (avoid for methods) or "arguments". 
+7. It can NOT be used as constructors or generators
 
 A good suggestion from developer Lars Schöning:
+
 1. Use function in the global scope and for Object.prototype properties.
 2. Use class for object constructors.
 3. Use => everywhere else.
