@@ -1,0 +1,19 @@
+const newArray = [1, 2, 3];
+
+// for...of can be used to iterate over arrays
+
+for(let items of newArray){
+    console.log(items);
+}
+
+// There is also another way using forEach method
+newArray.forEach(function (item) {
+    console.log(item);
+})
+
+// using forEach and array function :
+newArray.forEach(item => console.log(item));
+
+// Showing index and the numbers using array functions
+
+newArray.forEach((item,index)=> console.log(index,item));
