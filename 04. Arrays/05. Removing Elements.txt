@@ -1,0 +1,23 @@
+const newArray = [1,2,3,4,5];
+
+// removing last element
+let lastElement  = newArray.pop();
+console.log(lastElement);
+console.log(newArray);
+
+// removing element from beginning
+let firstElement = newArray.shift();
+console.log(firstElement);
+console.log(newArray);
+
+// removing element from middle
+const anotherArray = [1, 2, 3, 4];
+
+// to remove 3 and 4
+// first pass its index and then
+// pass numbers of elements to remove from that index
+// for us index is 2 and numbers of element to remove is also 2.
+
+let removedElements = anotherArray.splice(2,2);
+console.log(removedElements);
+console.log(anotherArray);

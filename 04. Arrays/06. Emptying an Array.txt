@@ -1,0 +1,40 @@
+let newArray = [1, 2, 3, 4, 5];
+let anotherArray = newArray;
+
+// first solution
+newArray = [];
+console.log(newArray);
+
+// Although newArray is assigned an empty array
+// It's previous value is still stored in previous memory location
+// as another array is still pointing to the same object.
+// if there weren't any other variables pointed towards it
+// it's value at previous memory location would be collected by garbage collector.
+console.log(anotherArray);
+// so first solution works if there are not any references to original array
+
+
+// second solution
+let thirdArray = anotherArray;
+anotherArray.length = 0;
+
+// it will turncate and remove all elements from same memory address
+// so any other references would also have an empty array now.
+console.log(thirdArray);
+
+
+// third solution
+let fourthArray = [1, 2, 3, 4, 5];
+fourthArray.splice(0,fourthArray.length);
+console.log(fourthArray);
+// for this solution any other references would also have an empty array now.
+
+// fourth solution
+let fifthArray = [1, 2, 3, 4, 5];
+while(fifthArray.length>0){
+    fifthArray.pop();
+}
+console.log(fifthArray);
+
+// fourth solution is not recommended
+// solution second/first are best way of approach
