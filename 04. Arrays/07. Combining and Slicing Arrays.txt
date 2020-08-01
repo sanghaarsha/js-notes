@@ -29,7 +29,7 @@ console.log(copyOfArray);
 // Another thing to note here is
 // If the elements of array are of reference types
 // There values are not copied but there address are copied 
-// and if you change the copied value values in orignal arrays are also changed
+// and if you change the copied value, values in orignal arrays are also changed
 
 const orignalArray = [{key : 1}];
 const secondOrignalArray = [2,3,4,5];
