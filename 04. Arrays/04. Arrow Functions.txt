@@ -11,4 +11,5 @@ const courses = [
 let check = courses.find(function (check) {
     return check.id === 2;
 });
+
 console.log(check);
