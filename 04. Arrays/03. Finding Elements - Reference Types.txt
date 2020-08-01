@@ -1,0 +1,35 @@
+// finding reference is different than finding primitives
+// as reference types reference to the stored memory location than data itself
+
+const courses = [
+  { id: 1, name: "a" },
+  { id: 2, name: "b" },
+];
+
+console.log(courses.includes({ id: 1, name: "a" }));
+// > false
+// it's because they are stored in different memory address
+
+// there's another way to find reference types in arrays
+
+let check = courses.find(function (courses) {
+  return courses.id === 2;
+});
+
+console.log(check);
+
+// here function() is called predicate or a call back function
+// because it's called back to find function
+// if an object is not found it returns undefined
+
+// theres another method called findIndex() which
+// returns the index of object instead of object itself
+let checkAgain = courses.findIndex(function (courses) {
+  return courses.id === 2;
+});
+
+console.log(checkAgain);
+// > 1 as the index of element having id 2 is second
+// if object doesn't exists it returns -1.
+
+// for more details check MDN page for find function.
