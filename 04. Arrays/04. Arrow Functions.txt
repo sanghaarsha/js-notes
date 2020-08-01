@@ -1,0 +1,14 @@
+// ARROW FUNCTIONS
+
+// Whenever you want to pass a function as a call back functions
+// Or an argument to a different method. We can use arrow functions.
+
+const courses = [
+    { id: 1, name: "a" },
+    { id: 2, name: "b" },
+];
+
+let check = courses.find(function (check) {
+    return check.id === 2;
+});
+console.log(check);

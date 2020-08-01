@@ -12,10 +12,9 @@ console.log(courses.includes({ id: 1, name: "a" }));
 
 // there's another way to find reference types in arrays
 
-let check = courses.find(function (courses) {
-  return courses.id === 2;
+let check = courses.find(function (check) {
+    return check.id === 2;
 });
-
 console.log(check);
 
 // here function() is called predicate or a call back function
@@ -24,10 +23,10 @@ console.log(check);
 
 // theres another method called findIndex() which
 // returns the index of object instead of object itself
-let checkAgain = courses.findIndex(function (courses) {
-  return courses.id === 2;
-});
 
+let checkAgain = courses.findIndex(function (checkAgain) {
+    return checkAgain.id === 2;
+});
 console.log(checkAgain);
 // > 1 as the index of element having id 2 is second
 // if object doesn't exists it returns -1.
