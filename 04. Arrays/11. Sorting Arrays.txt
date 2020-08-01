@@ -1,0 +1,50 @@
+const numbers = [5, 3, 1, 2, 4];
+
+// Sorting in Ascending Order
+let ascendingOrder = numbers.sort();
+console.log(ascendingOrder);
+
+// Reversing the order of elements of the array
+let reverseOrder = numbers.reverse();
+console.log(reverseOrder);
+
+//But sort method is not same for the Objects
+
+const myPets = [
+    { id: 1, name: "Rabbit" },
+    { id: 2, name: "Parrot" },
+];
+
+console.log(myPets.sort());
+// Doesn't Work
+
+myPets.sort(function (firstArg, secondArg) {
+    if (firstArg.name < secondArg.name) return -1;
+    else if (firstArg.name > secondArg.name) return 1;
+    else return 0;
+});
+
+console.log(myPets);
+
+// So now, Parrot comes before rabbit.
+// This is by comparing ASCII values.
+// And works only for same cases letters.
+
+// so lets create a new one
+// where it will sort alternate cases too
+
+const favColor = [
+    { id: 1, name: "Yellow" },
+    { id: 2, name: "white" },
+];
+
+favColor.sort(function (firstArg, secondArg) {
+    // changing both objects name to same case
+    const name1 = firstArg.name.toUpperCase();
+    const name2 = secondArg.name.toUpperCase();
+
+    if (name1 < name2) return -1;
+    else if (name1 > name2) return 1;
+    else return 0;
+});
+console.log(favColor);
