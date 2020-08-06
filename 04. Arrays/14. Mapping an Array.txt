@@ -1,0 +1,54 @@
+// Mapping an array is very useful and powerful feature in JavaScript
+// Lets take an example :
+// Lets consider Arrays to be Whole Veggies like :
+// Cabbage, Onion, Cucumber, Tomato, and a whole loaf of bread and meat
+// Now lets map them into pieces, Loaf cut into half,
+// Cucumber, Tomato Cut into Perfect cicrcular pieces,
+// Cabbage, Meat and Onion chopped
+// Each Veggie array is mapped into New array of their own
+// which is chopped from them, this process is called mapping
+// Mapping is itself incomplete because, if you cannot mix them into a sandwich
+// there's no use of chopping them. So, reduce comes for us to save,
+// reduce mixes those chopped veggies (array) and makes us a perfrct sandwich
+// Sandwich is served now !!
+
+// Mapping is cutiing arrays as per required and creating an new array from it
+// Reducing is joing mapped arrays in a meaningful way.
+
+const numbers = [1, -2, 3, -4, 5];
+let filteredArray = numbers.filter((value) => value > 0);
+
+// Lets map the filtered array in HTML markup
+
+const items = filteredArray.map((value) => "<li>" + value + "</li>");
+const markup = "<ul>" + items.join(" ") + "</ul>";
+console.log(markup);
+
+// Lets map an Object here :
+// Here we're mapping value from numbers2 array to an object with key 'value'
+
+const numbers2 = [1, -2, 3, -4, 5];
+let newArray = numbers2.map((value) => ({ value: value }));
+
+// Here, let newArray = numbers2.map((value) => { value: value }); will not work
+// because everything inside curly-bracket is treated as code-block and
+// value is not returned in arrow function, solution is to wrap around
+// with the circular brackets as done above
+
+console.log(newArray);
+
+// Note : map anf filter method create a new array based on given condition
+// They do not alter the original array.
+
+// So, we can also do chaining :
+// call a method that returns a value and call another
+// method on a same value
+
+const chainedValue = numbers
+    .filter((value) => value > 0)
+    .map((value) => ({ key: value }))
+    .filter((obj) => obj.key > 1);
+
+console.log(chainedValue);
+
+// By convention , each method is added in a new-line for chaining like above
