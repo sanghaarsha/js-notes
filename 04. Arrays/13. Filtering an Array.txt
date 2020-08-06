@@ -1,0 +1,16 @@
+// 'filter' method is used for filtering an array
+
+const numbers = [1,-2,3,-4,5];
+
+let filteredArray = numbers.filter(function(value){
+    return value >= 0;
+})
+
+// above callback function can also be written as : value => value > 0
+
+console.log(filteredArray);
+
+// Here we are using array of numbers, but in realworld
+// we will be using array of objects , to filter them
+// for example while filtering hotels in trivago
+// based on ratings, price, open/closed 
