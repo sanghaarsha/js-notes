@@ -1,0 +1,21 @@
+// there are two method in javascript 'every' and 'some'
+
+const numbers = [1,2,3];
+
+let allPositive = numbers.every(function(value) {
+    return value >= 0;
+})
+
+console.log(allPositive);
+
+// returns true if every elemet is true
+
+const numbers2 = [1, 2, 3,-4,5];
+
+let somePositive = numbers2.some(function (value) {
+    return value >= 0;
+})
+
+console.log(somePositive);
+
+// returns true if at least one of the elemet is true
