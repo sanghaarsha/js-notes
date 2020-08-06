@@ -1,0 +1,46 @@
+const numbers = [1, -2, 3, -4, 5];
+
+// Lets calculate the sum of all the numbers in this array.
+// Practically, it's similar to calculating sum of all items in a shopping cart
+
+// first way :
+
+let sum = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+}
+console.log(sum);
+
+// second way
+
+let add = 0;
+
+for (let n of numbers) {
+    add += n;
+}
+console.log(add);
+
+// cleaner and elegant way :
+
+const result = numbers.reduce(function (start, current) {
+    return (start += current);
+}, 0);
+console.log(result);
+
+// Now, lets look at the reduce method
+// Here, it has taken two arguments :
+// first is the callback function with two parameters:
+// accumulator = start, currentValue = current
+// the accumulator param is exactly like 'sum' and 'add' var above
+// eachtime callback function is executed currentValue will be set to one element from array
+// And second argument for reduce method is '0', which is inital value for accumulator
+
+// Note: reduce method has two arguments call-back function and initial value
+// Note: call back function has two arguments accumulator,currentValue
+// Note : if accumulator is not initialized 0 it will be set as first element
+//        and, currentValue will be set to second element.
+
+// Lets make the above code more shorter
+
+console.log(numbers.reduce((start, current) => (start += current)));
