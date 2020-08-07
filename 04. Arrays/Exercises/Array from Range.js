@@ -1,10 +1,9 @@
-const numbers =  filter(-1,5) ;
-console.log(numbers);
+const newArray = arrayFromRange(-1,4);
+console.log(newArray);
 
-function filter (min,max){
-    let filteredArray = []
-    for(i=min;i<=max;i++){
-        filteredArray.push(i);
-    }
-    return filteredArray;
+function arrayFromRange(min,max) {
+    let newArray = [];
+    for(i=min;i<=max;i++)
+    newArray.push(i);
+    return newArray;
 }
