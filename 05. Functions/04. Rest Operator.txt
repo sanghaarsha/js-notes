@@ -1,0 +1,31 @@
+// Note : spread operator and rest operator are not same although they look same
+// Spread operator was used to tahe individual elements of an array and copy it to a new array.
+// But if used in the parameter of a function it will be called the rest operator.
+
+// Lets use rest operator
+
+function sum(...args) {
+    return args.reduce((a, b) => a + b);
+}
+
+total = sum(1, 2, 3, 4, 5);
+console.log(total);
+
+// here we see rest operator takes all the args and returns them in a array
+
+// Lets take this example to the next level
+// Lets imagine we use rest operator to calculate
+// Total cost of a shopping cart
+// and also have a discount factor
+
+function cartCalc(discount, ...prices) {
+    const total = prices.reduce((a, b) => a + b);
+    return (1 - discount) * total;
+}
+
+grandTotal = cartCalc(0.1, 20, 30);
+console.log(grandTotal);
+
+// Note : Rest parameter must be the last parameter in a function
+// Thus comes the name 'rest', some parameters before and rest of the parameters at last
+// In our context, discount parameter and rest of the parameters (= prices of items).
