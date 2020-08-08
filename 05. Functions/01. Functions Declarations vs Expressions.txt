@@ -1,0 +1,21 @@
+// Function Declaration
+
+function walk(){
+	console.log('Walk');
+}
+
+// Anonymous 'Function Expression '
+
+let run = function(){
+	console.log('Run');
+};
+
+let x = 1;
+
+// Whenever we declare a statement we terminate with semi-colon
+// In contrast we do not terminate using semi-colon when
+// we declare function using Function Declaration syntax
+
+
+walk();
+run();
