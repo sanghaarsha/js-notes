@@ -1,40 +1,52 @@
 // Earlier we learned that JS is Dynamically Typed Language
-// By that we mean we can declare a variable of a type and 
+// By that we mean we can declare a variable of a type and
 // Can change it's value and type in anywhere in code.
 
 // We can apply the same concept in arguments of a function
 
-function sum (a,b){
-	return a+b;
+function sum(a, b) {
+    return a + b;
 }
 // Function sum has two parameter a,b
-
 
 // We are passing two arguments :
 
 //arguments of number type
-console.log(sum(1,2));
+console.log(sum(1, 2));
 
 //arguments of string type
-console.log(sum('Hello,',' World!'));
+console.log(sum("Hello,", " World!"));
 
 //arguments of string and number type
-console.log(sum('Hello, ', 44));
-
+console.log(sum("Hello, ", 44));
 
 // Another important note :
-// Even if the sum function has two parameters 
+// Even if the sum function has two parameters
 // we can pass a single argument.
 
 // Single number argument
 console.log(sum(1)); // we will get  1 + undefined = NaN
 
 // Single string argument
-console.log(sum('string arg ')); // We will get passed string-arg + undefined = string-argundefined (concat will happen)
+console.log(sum("string arg ")); // We will get passed string-arg + undefined = string-argundefined (concat will happen)
 
 // We can also not pass any arguments
 
-console.log(sum()) // undefined + undefined = NaN
+console.log(sum()); // undefined + undefined = NaN
 
 // We can also pass as much arguments as we like
- console.log(sum(2,3,4,5)); //Only the arguments equal to number of parameters are used 2+3 = 5
+console.log(sum(2, 3, 4, 5)); //Only the arguments equal to number of parameters are used 2+3 = 5
+
+// So, what if we want to pass as much arguments we want and still get sum of all of them?
+// There is a solution.
+// There is a special object for every function in javascript called arguments.
+// arguments returns an object with key = index and values = arguments passed.
+
+function anotherSum() {
+    let total = 0;
+    // for of can be used in any object with iterator
+    for (let value of arguments) total += value;
+
+    return total;
+}
+console.log(anotherSum(1, 2, 3, 4, 5, 6, 7, 8, 9));
