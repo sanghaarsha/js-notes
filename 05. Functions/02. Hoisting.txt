@@ -1,0 +1,27 @@
+// Function Declaration
+
+walk();
+
+function walk(){
+	console.log('Walk');
+}
+
+// Function Expression
+
+let run = function(){
+	console.log('Run');
+};
+
+run();
+
+// Key difference between Function Declarations and Function Expression is
+// You can call a function defined by Function Declaration before it's defined
+// You can't do the same for Function Expression
+
+// For the functions defined by Function Declarations 
+// JavaScript engine moves the function code to 
+// the top then the function call internally
+// This process is called 'Hoisting'
+// Process of moving function declarations on top of 
+// The file done internally by the JavaScript engine 
+// Is called Hoisting.
