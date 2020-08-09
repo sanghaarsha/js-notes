@@ -1,0 +1,51 @@
+// What if some parametrs have a default value like pi = 3.1415 ?
+
+// lets write a function that returns area of a circle
+
+function circleArea(radius, pi) {
+    pi = pi || 3.1415;
+    // if value of pi is falsy (meaning no value given)
+    // this will set default value to be 3.1415
+    return pi * radius ** 2;
+}
+
+console.log(circleArea(2));
+console.log(circleArea(2, 3));
+
+// what happens here is you can set a default value 3.1415
+//if user doesn't give a value to pi
+// theres another simple way to do this
+// lets do the same in a different way
+
+function areaAgain(radius, pi = 3.1415) {
+    return pi * radius ** 2;
+}
+
+console.log(areaAgain(2));
+console.log(areaAgain(2, 3));
+
+// above codes does the same and is elegent way to do so
+
+// lets write a function to return simple intrest using above method
+
+function simpleIntrest(p, r = 3.5, t = 5) {
+    return (p * t * r) / 100;
+}
+
+console.log(simpleIntrest(2000)); // uses default value for r & t
+console.log(simpleIntrest(2000, 1.5, 2)); // doesn't use any default value
+
+// There is one small problem here
+// if you give a default value to a parameter
+// you must give default values to the parameters after it
+// so, make sure to either place the parameter with the default value at last
+// or to give default values to all the parameters after it.
+// or you can work around
+// giving value 'undefined' to the parameter with default value, like this
+
+console.log(simpleIntrest(2000, undefined, 2));
+// uses default value for r only
+
+// NOTE : Do not use the work around , it's not elegent way to do so
+// Just keep the default parameter at last
+// Or give all the parameter after that a default value
