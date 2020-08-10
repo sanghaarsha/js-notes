@@ -1,0 +1,46 @@
+// Scoping is what determines the acessiblity of a variable in a code-base.
+// lets see for ourself , what are global and local scoped variable
+
+const hi = "hi";
+console.log(hi);
+// obviously we will see the log in console
+
+// now lets do the same but inside the code block
+
+{
+    let hello = "hello";
+}
+
+// console.log(hello);
+
+// we will get an error because above constant in block scoped and
+// not available outsid the block
+
+// These blocks are everywhere : in loops , conditionals, functions
+// so variable/constanr declared using let/const are not available outside the code-block
+
+// So, variable declared usimg let/const inside a code-block are local variable
+//  as ther are only available locally in a code-block
+
+// But variables or constant declared outside the code blocks are global scoped lets see :
+
+const color = "orange";
+
+for (let i = 1; i <= 5; i++) {
+    console.log(color);
+}
+
+// this code will log the value of color variable 5 times
+// it's because the const is declared outside the block of for loop
+// thus is global scoped
+
+// also note that local variable / constants take precedence over global variables/constants
+const animal = "cat";
+
+for (let i = 1; i <= 2; i++) {
+    const animal = "dog";
+    console.log(animal);
+}
+// here cat is over written by dog , a value given to local const animal
+
+// In general, defining global variable is a bad practice
