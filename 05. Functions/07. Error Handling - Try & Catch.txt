@@ -1,0 +1,44 @@
+// We can use Try and Catch for handling errors
+// In defensive programming, we try to avoid errors
+// By setting up exceptions and giving set of commands
+// To execute before going to main blocks of code
+// as we are defending the code blocks from errors and exceptions
+
+// For an example , if a method in an object takes an string and concats and
+// returns it. But if we pass a number/null or anyother value concat method will throw an error
+// so, we can give an condition before executing the concat method to check if passed arg is string?
+// if true code is executed else we can manually throw an error with custom messages.
+
+// Lets use this concept in the previous program we wrote
+
+const lastPerson = {
+    firstName: "Hilary",
+    lastName: "Darwin",
+    get fullName() {
+        return `${lastPerson.firstName} ${lastPerson.lastName}`;
+    },
+    set fullName(nameString) {
+        if (typeof nameString !== "string") {
+            throw new Error("Value is not a string");
+            //this is how we throw an exception
+        }
+        const halves = nameString.split(" ");
+
+        if (halves.length !== 2) {
+            throw new Error("Enter First and Last name.");
+        }
+
+        this.firstName = halves[0];
+        this.lastName = halves[1];
+    },
+};
+
+try {
+    lastPerson.fullName = "";
+} catch (e) {
+    console.error(e);
+}
+
+console.log(lastPerson.fullName);
+
+// This is basic of Error Handling in JavaScript.
