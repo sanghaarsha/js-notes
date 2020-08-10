@@ -34,7 +34,8 @@ const lastPerson = {
 };
 
 try {
-    lastPerson.fullName = "";
+    lastPerson.fullName = "Elliot Kai";
+    // if set to empty will show error message in console
 } catch (e) {
     console.error(e);
 }
