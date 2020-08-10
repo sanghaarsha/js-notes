@@ -1,0 +1,62 @@
+// Getters and Setters are Special methods in Objects
+// lets take an aobject
+
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+};
+
+// if we want to show full name  we have to do this :
+console.log(`${person.firstName} ${person.lastName}`);
+
+// this is not good way to do so.
+// we can define an method to the object whil will return the full name
+
+const anotherPerson = {
+    firstName: "Mikey",
+    lastName: "Dawson",
+    fullName() {
+        return `${anotherPerson.firstName} ${anotherPerson.lastName}`;
+    },
+};
+
+// Now with this everytime we need full name we can call fullName method
+console.log(anotherPerson.fullName());
+
+// However there are couples of problems with this approach
+// It's read only, meaning we cam not set person's name from outside
+// It would be good we could do that.
+// Another problem is we shuld call fullName as method
+// It would be nicer to call it as a property itself and not a method
+// And to solve thees comes getters and setters
+
+// We Use :
+// getters => access properties
+// setters => change or mutate them
+
+// so in above object we can use getters to help us
+// access person's full name as a property
+// and setters would help us to change the name of person from outside
+
+// lets implement getters and setters in a object
+
+const lastPerson = {
+    firstName: "Hilary",
+    lastName: "Darwin",
+    get fullName() {
+        return `${lastPerson.firstName} ${lastPerson.lastName}`;
+    },
+    set fullName(nameString) {
+        const halves = nameString.split(" ");
+        this.firstName = halves[0];
+        this.lastName = halves[1];
+    },
+};
+
+// notice we called fullName as a property
+console.log(lastPerson.fullName);
+
+// let set another name
+lastPerson.fullName = "Charles Bukowski";
+console.log(lastPerson.fullName);
+
