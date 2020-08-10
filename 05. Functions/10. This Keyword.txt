@@ -1,0 +1,41 @@
+// What is 'this'?
+// this keyword is used to refernce the object that us is executing the current function
+
+// a function that is part of an object is called 'method'
+// if 'this' is in the method it references the object itself (method => object)
+// if 'this' is in the regular function it references to global object (function => window (browsers), global (node))
+
+// Lets see an example :
+
+const movie = {
+    title: "Mission Impossible",
+    play() {
+        console.log(this);
+    },
+};
+
+movie.play();
+
+// Here this is referncing to the object movie itself
+
+// We can also add an method later in movie object and get the same result
+// Lets create a stop method to movie which will do same as play method
+
+movie.stop = function () {
+    console.log(this);
+};
+
+// Here stop is the method in the video object
+movie.stop();
+
+// That was for the this used inside  method
+// Now lets look at this used for a regular function
+
+function resumeVideo(){
+    console.log(this);
+}
+
+resumeVideo();
+
+// We san see global object being logged into the console in node and Window object in browser
+
