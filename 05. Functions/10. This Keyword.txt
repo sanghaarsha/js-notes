@@ -31,11 +31,61 @@ movie.stop();
 // That was for the this used inside  method
 // Now lets look at this used for a regular function
 
-function resumeVideo(){
+function resumeVideo() {
     console.log(this);
 }
 
 resumeVideo();
-
 // We san see global object being logged into the console in node and Window object in browser
 
+// So, we did for methods, regular functions, what if it's counstructor function?
+
+function ResetVideo(title) {
+    this.title = title;
+    console.log(this);
+}
+
+const r = new ResetVideo("Intersteller");
+
+// Note : We get a new object called ResetVideo, with passed arguments in it
+// as we previously learned new operator creates a new empty object
+// and sets 'this' in the constructor function to point to the empty object
+
+// Lets look at the last example.
+
+const images = {
+    name: "nature",
+    tags: ["green", "tree", "river"],
+    showTags() {
+        this.tags.forEach(function (tag) {
+            console.log(this.name, tag);
+        });
+    },
+};
+
+images.showTags();
+
+// So, we get the tags, but what if we need name of the image next to the tags?
+// We should be able to add  console.log(this.name,tag); and it should solve right?
+// No it wont, as we are inside the callback function, this used there will point to window object
+// And we will get undefined as the output for titles
+
+
+// so, how to solve it? Lets take an another object and solve this problem.
+
+const myMovies = {
+    name: "The Godfather",
+    tags: ["action", "high ratings", "mafia"],
+    showTags() {
+        this.tags.forEach(function (tag) {
+            console.log(this.name, tag);
+        },this);
+    },
+};
+
+myMovies.showTags();
+
+// Now we have solved problem by passing the 'this' parameter 
+// which points to myMovies object for the forEach method
+// which is outside the callback function and 'this' used in it's 
+// Parameter will still point at the myMovies object
