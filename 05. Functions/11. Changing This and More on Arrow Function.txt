@@ -90,4 +90,8 @@ const favMovie = {
         this.tags.forEach((tag) => console.log(this.name, tag));
     },
 };
+
 favMovie.showTags();
+
+// Code is simpler and more readable and does the same work
+// Because arrow functions inherit 'this' from containing function
