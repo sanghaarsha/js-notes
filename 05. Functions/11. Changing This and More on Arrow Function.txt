@@ -1,0 +1,93 @@
+// Using self/that
+// some developers prefer to use that, some prefer self
+
+// In previous lesson, we passed this argument in forEach as a parameter
+// To solve the problem of this pointing to the global object
+// But we can use another way
+
+const myMovies = {
+    name: "The Godfather",
+    tags: ["action", "high ratings", "mafia"],
+    showTags() {
+        const that = this;
+        this.tags.forEach(function (tag) {
+            console.log(that.name, tag);
+        });
+    },
+};
+
+myMovies.showTags();
+
+// What we did was, we set 'that' to reference to the myMovies object
+// and that solves the problem araised by this inside the callback function
+// It's not a preferred approach, but many developers use it.
+
+// So, Lets look at the another approach
+// using call/apply/bind to set 'this' argument for a given function
+
+// Earlier we learnt, functions are objects
+// So, they have a lot of properties and objects
+// Among these methods, apply, bind and call
+// can be used to change value of this
+
+function mySongs() {
+    console.log(this);
+}
+
+// simplest among them is call method
+
+mySongs.call({ name: "Thunderstruck", tags: ["Rock", "AC/DC"] });
+// Now we see this's value set to the object passed here
+
+// If we normally call the function we can see this set to global/window object
+mySongs();
+
+// Apply method is similar to call
+mySongs.apply({ name: "Night Changes", tags: ["Pop", "One Direction"] });
+// The only difference between call/apply is in passing arguments
+// If the function has multiples of parameter we must pass them as array
+// while using apply method
+
+// Another method is bind
+
+mySongs.bind({ name: "Killer Queen", tags: ["Rock", "Queen"] });
+
+// Notice you wont see it logged to the console
+// it's because bind methid does not call mySongs function
+// it returns a new function and set this to point at that object (passed from bind method) permanently
+// to log it we must store the result
+
+const fn = mySongs.bind({ name: "Killer Queen", tags: ["Rock", "Queen"] });
+// now lets call the function
+fn();
+// Now we see result logged into the console
+
+// Now lets solve first problem without using that/self
+
+// Using the bind method
+const otherMovie = {
+    name: "Charlie and The Chocolate Factory",
+    tags: ["adventure", "family", "kids"],
+    showTags() {
+        this.tags.forEach(
+            function (tag) {
+                console.log(this.name, tag);
+            }.bind(this)
+        );
+    },
+};
+
+otherMovie.showTags();
+
+// Starting from ES-6, we have a newer and better solution
+// Now we have arrow functions
+// As arrow function inherit the 'this' value
+
+const favMovie = {
+    name: "The Martian",
+    tags: ["sci-fi", "space", "mars"],
+    showTags() {
+        this.tags.forEach((tag) => console.log(this.name, tag));
+    },
+};
+favMovie.showTags();
