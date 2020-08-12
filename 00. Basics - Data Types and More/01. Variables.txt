@@ -5,12 +5,12 @@ console.log(name)
 
 Rules:
 
-1. Cant use reserved Keywords
+1. Can't use reserved Keywords
 2. Use Meaningful Variables Name
 3. Can't start with number
-4. Cant use hyphens and or space
-5. Use variable in camle-case ie. firstName, lastName
-6. Variables are cased sensitive
+4. Can't use hyphens and or space
+5. Use variable in Camle-cased ie. firstName, lastName
+6. Variables are case sensitive
 
 Best way to declare variable is:
 
@@ -18,4 +18,3 @@ let firstName = 'abc';
 let lastName = 'def';
 
 not : let firstName = 'abc',lastName = 'def';
-
